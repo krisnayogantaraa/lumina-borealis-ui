@@ -1,0 +1,41 @@
+/* ============================================================
+ * LUMA BUTTON GROUP — Styles
+ *
+ * Mengatur tata letak Button ketika digabungkan.
+ * Menghilangkan radius di sisi yang bersentuhan dan
+ * menangani overlap border (margin-left: -1px).
+ * ============================================================ */
+
+ .luma-button-group {
+  display: inline-flex;
+  border-radius: var(--luma-radius-md); /* Ensures focus rings on group itself are rounded if needed */
+}
+
+/* 1. Geser tombol ke kiri sedikit agar bordernya tumpang tindih (jadi 1px bukan 2px) */
+.luma-button-group > .luma-button:not(:first-child) {
+  margin-left: -1px;
+}
+
+/* 2. Tombol di tengah tidak punya sudut melengkung sama sekali */
+.luma-button-group > .luma-button:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+
+/* 3. Tombol pertama (paling kiri) hanya punya lengkungan di kiri */
+.luma-button-group > .luma-button:first-child:not(:last-child) {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* 4. Tombol terakhir (paling kanan) hanya punya lengkungan di kanan */
+.luma-button-group > .luma-button:last-child:not(:first-child) {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+/* 5. Angkat tombol saat di-hover/focus agar warna bordernya menutupi border tetangganya */
+.luma-button-group > .luma-button:hover,
+.luma-button-group > .luma-button:focus-visible,
+.luma-button-group > .luma-button:active {
+  z-index: 1;
+}

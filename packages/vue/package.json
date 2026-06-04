@@ -21,13 +21,26 @@
   "scripts": {
     "build": "npx vite build && npx vue-tsc --emitDeclarationOnly",
     "dev": "npx vite build --watch",
-    "clean": "rimraf dist"
+    "clean": "rimraf dist",
+    "storybook": "storybook dev -p 6006",
+    "build-storybook": "storybook build"
   },
   "peerDependencies": {
     "vue": "^3.4.0"
   },
+  "dependencies": {
+    "@lumina-borealis/core": "*"
+  },
   "devDependencies": {
+    "@lucide/vue": "^1.16.0",
+    "@storybook/addon-docs": "^10.4.1",
+    "@storybook/addon-links": "^10.4.1",
+    "@storybook/blocks": "^8.6.14",
+    "@storybook/test": "^8.6.15",
+    "@storybook/vue3": "^10.4.1",
+    "@storybook/vue3-vite": "^10.4.1",
     "@vitejs/plugin-vue": "^5.2.3",
+    "storybook": "^10.4.1",
     "typescript": "^5.7.0",
     "vite": "^6.3.0",
     "vue": "^3.5.0",

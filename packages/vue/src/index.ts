@@ -1,4 +1,4 @@
-﻿// Layout
+// Layout
 export * from './components/layout';
 
 // Typography
@@ -18,3 +18,7 @@ export * from './components/feedback';
 
 // Navigation
 export * from './components/navigation';
+
+// Core & Config
+export * from './config';
+export { default as LumaIcon } from './components/icon/Icon.vue';

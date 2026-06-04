@@ -1,0 +1,163 @@
+/* ============================================================
+ * LUMINA BOREALIS — Design Tokens
+ *
+ * Sistem warna "Professional Aurora":
+ * - Primary: Borealis Teal (hijau kebiruan elegan)
+ * - Secondary: Midnight Indigo (ungu kebiruan gelap)
+ * - Neutrals: Slate (abu-abu dengan hint biru, terkesan premium)
+ * - Danger: Rose (merah yang tidak agresif)
+ * - Warning: Amber
+ * - Success: Emerald
+ *
+ * Struktur:
+ * 1. Base Palette → Skala warna mentah (50-950)
+ * 2. Semantic Tokens → Variabel bermakna, dipetakan dari Base
+ * 3. Component Tokens → Override per komponen (opsional)
+ *
+ * Consumer bisa me-reassign semantic tokens di project mereka
+ * untuk mengubah seluruh tampilan tanpa menyentuh komponen.
+ * ============================================================ */
+
+:root {
+  /* ======================================================
+   * 1. BASE PALETTE
+   * ====================================================== */
+
+  /* ---- Teal (Primary) ---- */
+  --luma-teal-50: #f0fdfa;
+  --luma-teal-100: #ccfbf1;
+  --luma-teal-200: #99f6e4;
+  --luma-teal-300: #5eead4;
+  --luma-teal-400: #2dd4bf;
+  --luma-teal-500: #14b8a6;
+  --luma-teal-600: #0d9488;
+  --luma-teal-700: #0f766e;
+  --luma-teal-800: #115e59;
+  --luma-teal-900: #134e4a;
+  --luma-teal-950: #042f2e;
+
+  /* ---- Indigo (Secondary) ---- */
+  --luma-indigo-50: #eef2ff;
+  --luma-indigo-100: #e0e7ff;
+  --luma-indigo-200: #c7d2fe;
+  --luma-indigo-300: #a5b4fc;
+  --luma-indigo-400: #818cf8;
+  --luma-indigo-500: #6366f1;
+  --luma-indigo-600: #4f46e5;
+  --luma-indigo-700: #4338ca;
+  --luma-indigo-800: #3730a3;
+  --luma-indigo-900: #312e81;
+  --luma-indigo-950: #1e1b4b;
+
+  /* ---- Slate (Neutrals) ---- */
+  --luma-slate-50: #f8fafc;
+  --luma-slate-100: #f1f5f9;
+  --luma-slate-200: #e2e8f0;
+  --luma-slate-300: #cbd5e1;
+  --luma-slate-400: #94a3b8;
+  --luma-slate-500: #64748b;
+  --luma-slate-600: #475569;
+  --luma-slate-700: #334155;
+  --luma-slate-800: #1e293b;
+  --luma-slate-900: #0f172a;
+  --luma-slate-950: #020617;
+
+  /* ---- Rose (Danger) ---- */
+  --luma-rose-50: #fff1f2;
+  --luma-rose-100: #ffe4e6;
+  --luma-rose-200: #fecdd3;
+  --luma-rose-300: #fda4af;
+  --luma-rose-400: #fb7185;
+  --luma-rose-500: #f43f5e;
+  --luma-rose-600: #e11d48;
+  --luma-rose-700: #be123c;
+
+  /* ---- Amber (Warning) ---- */
+  --luma-amber-50: #fffbeb;
+  --luma-amber-400: #fbbf24;
+  --luma-amber-500: #f59e0b;
+  --luma-amber-600: #d97706;
+
+  /* ---- Emerald (Success) ---- */
+  --luma-emerald-50: #ecfdf5;
+  --luma-emerald-400: #34d399;
+  --luma-emerald-500: #10b981;
+  --luma-emerald-600: #059669;
+
+
+  /* ======================================================
+   * 2. SEMANTIC TOKENS
+   * ====================================================== */
+
+  /* ---- Primary ---- */
+  --luma-color-primary: var(--luma-teal-600);
+  --luma-color-primary-hover: var(--luma-teal-700);
+  --luma-color-primary-active: var(--luma-teal-800);
+  --luma-color-primary-light: var(--luma-teal-50);
+  --luma-color-primary-border: var(--luma-teal-300);
+
+  /* ---- Secondary ---- */
+  --luma-color-secondary: var(--luma-indigo-600);
+  --luma-color-secondary-hover: var(--luma-indigo-700);
+  --luma-color-secondary-active: var(--luma-indigo-800);
+  --luma-color-secondary-light: var(--luma-indigo-50);
+
+  /* ---- Danger ---- */
+  --luma-color-danger: var(--luma-rose-600);
+  --luma-color-danger-hover: var(--luma-rose-700);
+  --luma-color-danger-active: var(--luma-rose-700);
+  --luma-color-danger-light: var(--luma-rose-50);
+
+  /* ---- Warning ---- */
+  --luma-color-warning: var(--luma-amber-500);
+  --luma-color-warning-light: var(--luma-amber-50);
+
+  /* ---- Success ---- */
+  --luma-color-success: var(--luma-emerald-500);
+  --luma-color-success-light: var(--luma-emerald-50);
+
+  /* ---- Backgrounds ---- */
+  --luma-bg-base: #ffffff;
+  --luma-bg-surface: var(--luma-slate-50);
+  --luma-bg-muted: var(--luma-slate-100);
+  --luma-bg-overlay: rgba(15, 23, 42, 0.5);
+
+  /* ---- Text ---- */
+  --luma-text-primary: var(--luma-slate-900);
+  --luma-text-secondary: var(--luma-slate-600);
+  --luma-text-muted: var(--luma-slate-400);
+  --luma-text-inverse: #ffffff;
+
+  /* ---- Borders ---- */
+  --luma-border-default: var(--luma-slate-200);
+  --luma-border-strong: var(--luma-slate-300);
+
+  /* ---- Focus Ring (Aurora Glow ✨) ---- */
+  --luma-focus-ring-color: var(--luma-teal-400);
+  --luma-focus-ring-shadow: 0 0 0 3px rgba(20, 184, 166, 0.35);
+
+  /* ---- Radius ---- */
+  --luma-radius-sm: 0.25rem;
+  --luma-radius-md: 0.375rem;
+  --luma-radius-lg: 0.5rem;
+  --luma-radius-xl: 0.75rem;
+  --luma-radius-full: 9999px;
+
+  /* ---- Shadows ---- */
+  --luma-shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --luma-shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+
+  /* ---- Typography ---- */
+  --luma-font-sans: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --luma-font-mono: 'JetBrains Mono', ui-monospace, monospace;
+
+  --luma-text-xs: 0.75rem;
+  --luma-text-sm: 0.875rem;
+  --luma-text-base: 1rem;
+  --luma-text-lg: 1.125rem;
+
+  /* ---- Transitions ---- */
+  --luma-transition-fast: 150ms ease;
+  --luma-transition-base: 200ms ease;
+  --luma-transition-slow: 300ms ease;
+}

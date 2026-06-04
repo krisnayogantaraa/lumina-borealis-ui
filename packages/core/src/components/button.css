@@ -1,0 +1,213 @@
+/* ============================================================
+ * LUMA BUTTON — Styles
+ *
+ * Menggunakan Semantic Tokens dari tokens/index.css.
+ * Tidak ada hardcoded color di sini — semua merujuk ke variabel.
+ * ============================================================ */
+
+/* ---- Reset & Base ---- */
+.luma-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  position: relative;
+
+  border: 1px solid transparent;
+  border-radius: var(--luma-radius-md);
+  font-family: var(--luma-font-sans);
+  font-weight: 600;
+  line-height: 1.25;
+  cursor: pointer;
+  transition: all var(--luma-transition-base);
+  user-select: none;
+  white-space: nowrap;
+  text-decoration: none;
+}
+
+.luma-button:focus-visible {
+  outline: 2px solid var(--luma-focus-ring-color);
+  outline-offset: 2px;
+  box-shadow: var(--luma-focus-ring-shadow);
+}
+
+/* ---- Size Variants ---- */
+.luma-button--sm {
+  padding: 0.375rem 0.75rem;
+  font-size: var(--luma-text-xs);
+  border-radius: var(--luma-radius-sm);
+}
+
+.luma-button--md {
+  padding: 0.5rem 1rem;
+  font-size: var(--luma-text-sm);
+  border-radius: var(--luma-radius-md);
+}
+
+.luma-button--lg {
+  padding: 0.625rem 1.5rem;
+  font-size: var(--luma-text-base);
+  border-radius: var(--luma-radius-md);
+}
+
+/* ---- Icon Only Variant ---- */
+.luma-button--icon-only {
+  padding: 0;
+  aspect-ratio: 1 / 1;
+}
+
+.luma-button--icon-only.luma-button--sm {
+  width: 1.75rem;
+}
+
+.luma-button--icon-only.luma-button--md {
+  width: 2.25rem;
+}
+
+.luma-button--icon-only.luma-button--lg {
+  width: 2.75rem;
+}
+
+/* ============================================================
+ * Visual Variants
+ * ============================================================ */
+
+/* ---- Primary (Teal) ---- */
+.luma-button--primary {
+  background-color: var(--luma-color-primary);
+  color: var(--luma-text-inverse);
+  border-color: var(--luma-color-primary);
+}
+.luma-button--primary:hover:not(:disabled) {
+  background-color: var(--luma-color-primary-hover);
+  border-color: var(--luma-color-primary-hover);
+}
+.luma-button--primary:active:not(:disabled) {
+  background-color: var(--luma-color-primary-active);
+  border-color: var(--luma-color-primary-active);
+}
+
+/* ---- Secondary (Indigo) ---- */
+.luma-button--secondary {
+  background-color: var(--luma-color-secondary);
+  color: var(--luma-text-inverse);
+  border-color: var(--luma-color-secondary);
+}
+.luma-button--secondary:hover:not(:disabled) {
+  background-color: var(--luma-color-secondary-hover);
+  border-color: var(--luma-color-secondary-hover);
+}
+.luma-button--secondary:active:not(:disabled) {
+  background-color: var(--luma-color-secondary-active);
+  border-color: var(--luma-color-secondary-active);
+}
+
+/* ---- Outline ---- */
+.luma-button--outline {
+  background-color: transparent;
+  color: var(--luma-color-primary);
+  border-color: var(--luma-border-strong);
+}
+.luma-button--outline:hover:not(:disabled) {
+  background-color: var(--luma-color-primary-light);
+  border-color: var(--luma-color-primary-border);
+  color: var(--luma-color-primary-hover);
+}
+.luma-button--outline:active:not(:disabled) {
+  background-color: var(--luma-teal-100);
+}
+
+/* ---- Ghost ---- */
+.luma-button--ghost {
+  background-color: transparent;
+  color: var(--luma-color-primary);
+  border-color: transparent;
+}
+.luma-button--ghost:hover:not(:disabled) {
+  background-color: var(--luma-color-primary-light);
+  color: var(--luma-color-primary-hover);
+}
+.luma-button--ghost:active:not(:disabled) {
+  background-color: var(--luma-teal-100);
+}
+
+/* ---- Danger (Rose) ---- */
+.luma-button--danger {
+  background-color: var(--luma-color-danger);
+  color: var(--luma-text-inverse);
+  border-color: var(--luma-color-danger);
+}
+.luma-button--danger:hover:not(:disabled) {
+  background-color: var(--luma-color-danger-hover);
+  border-color: var(--luma-color-danger-hover);
+}
+.luma-button--danger:active:not(:disabled) {
+  background-color: var(--luma-color-danger-active);
+  border-color: var(--luma-color-danger-active);
+}
+.luma-button--danger:focus-visible {
+  --luma-focus-ring-color: var(--luma-rose-400);
+  --luma-focus-ring-shadow: 0 0 0 3px rgba(244, 63, 94, 0.3);
+}
+
+/* ============================================================
+ * States
+ * ============================================================ */
+
+/* ---- Disabled ---- */
+.luma-button--disabled,
+.luma-button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ---- Loading ---- */
+.luma-button--loading {
+  cursor: wait;
+}
+
+/* ============================================================
+ * Internal Structure
+ * ============================================================ */
+
+/* ---- Content ---- */
+.luma-button__content {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  transition: opacity var(--luma-transition-fast);
+}
+
+.luma-button__content--hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* ---- Icons ---- */
+.luma-button__icon {
+  display: inline-flex;
+  align-items: center;
+  flex-shrink: 0;
+  font-size: 1.125em;
+}
+
+/* ---- Spinner ---- */
+.luma-button__spinner {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.luma-button__spinner-icon {
+  width: 1.25em;
+  height: 1.25em;
+  animation: luma-spin 0.75s linear infinite;
+}
+
+@keyframes luma-spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
