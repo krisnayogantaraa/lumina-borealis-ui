@@ -1,0 +1,83 @@
+/* ============================================================
+ * LUMA DIVIDER — Visual Separator
+ *
+ * Garis pemisah horizontal atau vertikal.
+ * Mendukung label opsional di tengah.
+ * ============================================================ */
+
+.luma-divider {
+  border: 0;
+  margin: 0;
+}
+
+/* ---- Horizontal (default) ---- */
+.luma-divider--horizontal {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: var(--luma-space-sm);
+}
+
+.luma-divider--horizontal::before,
+.luma-divider--horizontal::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background-color: var(--luma-border-default);
+}
+
+/* Jika tidak ada label, hilangkan gap dan pseudo-element kedua */
+.luma-divider--horizontal.luma-divider--no-label::after {
+  display: none;
+}
+.luma-divider--horizontal.luma-divider--no-label::before {
+  flex: unset;
+  width: 100%;
+}
+
+/* ---- Vertical ---- */
+.luma-divider--vertical {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: stretch;
+  gap: var(--luma-space-sm);
+}
+
+.luma-divider--vertical::before,
+.luma-divider--vertical::after {
+  content: '';
+  flex: 1;
+  width: 1px;
+  background-color: var(--luma-border-default);
+}
+
+.luma-divider--vertical.luma-divider--no-label::after {
+  display: none;
+}
+.luma-divider--vertical.luma-divider--no-label::before {
+  flex: unset;
+  height: 100%;
+}
+
+/* ---- Label ---- */
+.luma-divider__label {
+  font-family: var(--luma-font-sans);
+  font-size: var(--luma-text-sm);
+  color: var(--luma-text-muted);
+  white-space: nowrap;
+  user-select: none;
+}
+
+/* ---- Spacing variants (margin around divider) ---- */
+.luma-divider--space-xs { margin-top: var(--luma-space-xs); margin-bottom: var(--luma-space-xs); }
+.luma-divider--space-sm { margin-top: var(--luma-space-sm); margin-bottom: var(--luma-space-sm); }
+.luma-divider--space-md { margin-top: var(--luma-space-md); margin-bottom: var(--luma-space-md); }
+.luma-divider--space-lg { margin-top: var(--luma-space-lg); margin-bottom: var(--luma-space-lg); }
+.luma-divider--space-xl { margin-top: var(--luma-space-xl); margin-bottom: var(--luma-space-xl); }
+
+.luma-divider--vertical.luma-divider--space-xs { margin-top: 0; margin-bottom: 0; margin-left: var(--luma-space-xs); margin-right: var(--luma-space-xs); }
+.luma-divider--vertical.luma-divider--space-sm { margin-top: 0; margin-bottom: 0; margin-left: var(--luma-space-sm); margin-right: var(--luma-space-sm); }
+.luma-divider--vertical.luma-divider--space-md { margin-top: 0; margin-bottom: 0; margin-left: var(--luma-space-md); margin-right: var(--luma-space-md); }
+.luma-divider--vertical.luma-divider--space-lg { margin-top: 0; margin-bottom: 0; margin-left: var(--luma-space-lg); margin-right: var(--luma-space-lg); }
+.luma-divider--vertical.luma-divider--space-xl { margin-top: 0; margin-bottom: 0; margin-left: var(--luma-space-xl); margin-right: var(--luma-space-xl); }

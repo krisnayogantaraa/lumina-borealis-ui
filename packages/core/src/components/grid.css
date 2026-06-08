@@ -1,0 +1,39 @@
+/* ============================================================
+ * LUMA GRID — CSS Grid Layout Component (12-column)
+ *
+ * Sistem grid 12-kolom menggunakan CSS Grid.
+ * ============================================================ */
+
+.luma-grid {
+  display: grid;
+  grid-template-columns: repeat(var(--luma-grid-cols, 12), minmax(0, 1fr));
+}
+
+/* ---- Columns ---- */
+.luma-grid--cols-1 { --luma-grid-cols: 1; }
+.luma-grid--cols-2 { --luma-grid-cols: 2; }
+.luma-grid--cols-3 { --luma-grid-cols: 3; }
+.luma-grid--cols-4 { --luma-grid-cols: 4; }
+.luma-grid--cols-5 { --luma-grid-cols: 5; }
+.luma-grid--cols-6 { --luma-grid-cols: 6; }
+.luma-grid--cols-7 { --luma-grid-cols: 7; }
+.luma-grid--cols-8 { --luma-grid-cols: 8; }
+.luma-grid--cols-9 { --luma-grid-cols: 9; }
+.luma-grid--cols-10 { --luma-grid-cols: 10; }
+.luma-grid--cols-11 { --luma-grid-cols: 11; }
+.luma-grid--cols-12 { --luma-grid-cols: 12; }
+
+/* ---- Gap ---- */
+.luma-grid--gap-xs { gap: var(--luma-space-xs); }
+.luma-grid--gap-sm { gap: var(--luma-space-sm); }
+.luma-grid--gap-md { gap: var(--luma-space-md); }
+.luma-grid--gap-lg { gap: var(--luma-space-lg); }
+.luma-grid--gap-xl { gap: var(--luma-space-xl); }
+.luma-grid--gap-2xl { gap: var(--luma-space-2xl); }
+.luma-grid--gap-none { gap: 0; }
+
+/* ---- Align Items ---- */
+.luma-grid--align-start { align-items: flex-start; }
+.luma-grid--align-center { align-items: center; }
+.luma-grid--align-end { align-items: flex-end; }
+.luma-grid--align-stretch { align-items: stretch; }

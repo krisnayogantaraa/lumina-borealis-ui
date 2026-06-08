@@ -8,4 +8,8 @@
 /* 2. Components */
 @import './components/button.css';
 @import './components/button-group.css';
+@import './components/stack.css';
+@import './components/grid.css';
+@import './components/container.css';
+@import './components/divider.css';
 

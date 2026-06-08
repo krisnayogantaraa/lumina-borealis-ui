@@ -1,0 +1,47 @@
+/* ============================================================
+ * LUMA STACK — Flexbox Layout Component
+ *
+ * Komponen flex serbaguna. Mendukung arah (horizontal/vertical),
+ * gap, align, justify, dan wrap.
+ * ============================================================ */
+
+.luma-stack {
+  display: flex;
+}
+
+/* ---- Direction ---- */
+.luma-stack--vertical {
+  flex-direction: column;
+}
+
+.luma-stack--horizontal {
+  flex-direction: row;
+}
+
+/* ---- Gap ---- */
+.luma-stack--gap-xs { gap: var(--luma-space-xs); }
+.luma-stack--gap-sm { gap: var(--luma-space-sm); }
+.luma-stack--gap-md { gap: var(--luma-space-md); }
+.luma-stack--gap-lg { gap: var(--luma-space-lg); }
+.luma-stack--gap-xl { gap: var(--luma-space-xl); }
+.luma-stack--gap-2xl { gap: var(--luma-space-2xl); }
+.luma-stack--gap-none { gap: 0; }
+
+/* ---- Align (cross axis) ---- */
+.luma-stack--align-start { align-items: flex-start; }
+.luma-stack--align-center { align-items: center; }
+.luma-stack--align-end { align-items: flex-end; }
+.luma-stack--align-stretch { align-items: stretch; }
+.luma-stack--align-baseline { align-items: baseline; }
+
+/* ---- Justify (main axis) ---- */
+.luma-stack--justify-start { justify-content: flex-start; }
+.luma-stack--justify-center { justify-content: center; }
+.luma-stack--justify-end { justify-content: flex-end; }
+.luma-stack--justify-between { justify-content: space-between; }
+.luma-stack--justify-around { justify-content: space-around; }
+.luma-stack--justify-evenly { justify-content: space-evenly; }
+
+/* ---- Wrap ---- */
+.luma-stack--wrap { flex-wrap: wrap; }
+.luma-stack--nowrap { flex-wrap: nowrap; }

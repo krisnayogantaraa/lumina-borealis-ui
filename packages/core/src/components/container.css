@@ -1,0 +1,20 @@
+/* ============================================================
+ * LUMA CONTAINER — Centered Content Wrapper
+ *
+ * Membatasi lebar konten dan memusatkannya di layar.
+ * ============================================================ */
+
+.luma-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: var(--luma-space-md);
+  padding-right: var(--luma-space-md);
+}
+
+/* ---- Sizes ---- */
+.luma-container--sm { max-width: var(--luma-container-sm); }
+.luma-container--md { max-width: var(--luma-container-md); }
+.luma-container--lg { max-width: var(--luma-container-lg); }
+.luma-container--xl { max-width: var(--luma-container-xl); }
+.luma-container--full { max-width: 100%; }
