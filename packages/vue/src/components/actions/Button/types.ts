@@ -5,15 +5,15 @@
  * import type { LumaButtonProps, ButtonVariant } from '@lumina-borealis/vue';
  */
 
-import type { Component, InjectionKey } from 'vue';
+import type { Component, InjectionKey, Ref } from 'vue';
 
 export type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'ghost' | 'danger';
 
 export type ButtonSize = 'sm' | 'md' | 'lg';
 
 export interface ButtonGroupContext {
-  variant?: ButtonVariant;
-  size?: ButtonSize;
+  variant: Ref<ButtonVariant | undefined>;
+  size: Ref<ButtonSize | undefined>;
 }
 
 export const buttonGroupInjectionKey: InjectionKey<ButtonGroupContext> = Symbol('luma-button-group');

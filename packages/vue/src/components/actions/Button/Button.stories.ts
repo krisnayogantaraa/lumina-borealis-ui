@@ -24,10 +24,14 @@ const meta = {
     variant: {
       control: 'select',
       options: ['primary', 'secondary', 'outline', 'ghost', 'danger'],
+      description: 'Varian visual tombol',
+      table: { defaultValue: { summary: 'primary' } },
     },
     size: {
       control: 'select',
       options: ['sm', 'md', 'lg'],
+      description: 'Ukuran tombol',
+      table: { defaultValue: { summary: 'md' } },
     },
     icon: {
       control: 'text',
@@ -61,26 +65,31 @@ const render = (args: any) => ({
 export const Primary: Story = {
   args: { variant: 'primary', default: 'Primary Button' },
   render,
+  parameters: { docs: { source: { language: 'html', code: `<LumaButton variant="primary">Primary Button</LumaButton>` } } },
 };
 
 export const Secondary: Story = {
   args: { variant: 'secondary', default: 'Secondary' },
   render,
+  parameters: { docs: { source: { language: 'html', code: `<LumaButton variant="secondary">Secondary</LumaButton>` } } },
 };
 
 export const Outline: Story = {
   args: { variant: 'outline', default: 'Outline' },
   render,
+  parameters: { docs: { source: { language: 'html', code: `<LumaButton variant="outline">Outline</LumaButton>` } } },
 };
 
 export const Ghost: Story = {
   args: { variant: 'ghost', default: 'Ghost' },
   render,
+  parameters: { docs: { source: { language: 'html', code: `<LumaButton variant="ghost">Ghost</LumaButton>` } } },
 };
 
 export const Danger: Story = {
   args: { variant: 'danger', default: 'Delete' },
   render,
+  parameters: { docs: { source: { language: 'html', code: `<LumaButton variant="danger">Delete</LumaButton>` } } },
 };
 
 /** 
@@ -91,7 +100,6 @@ export const IconAsVueComponent: Story = {
   render: () => ({
     components: { LumaButton },
     setup() {
-      // Import langsung komponen SVG dari Lucide
       return { Mail, Search };
     },
     template: `
@@ -101,6 +109,23 @@ export const IconAsVueComponent: Story = {
       </div>
     `
   }),
+  parameters: {
+    docs: {
+      source: {
+        language: 'html',
+        code: `
+<script setup>
+import { Mail, Search } from '@lucide/vue'
+</script>
+
+<template>
+  <LumaButton :icon="Mail">Kirim Pesan</LumaButton>
+  <LumaButton :icon="Search" iconPos="right" variant="outline">Cari Data</LumaButton>
+</template>
+        `.trim(),
+      },
+    },
+  },
 };
 
 /**
@@ -112,19 +137,29 @@ export const IconAsGlobalString: Story = {
     components: { LumaButton },
     template: `
       <div style="display: flex; gap: 1rem;">
-        <!-- 'check' di-resolve menjadi komponen SVG Lucide Check via global resolver -->
-        <LumaButton icon="check" variant="success">Disetujui</LumaButton>
-        
-        <!-- 'fa-heart' di-resolve menjadi HTML class '<i class="fa fa-heart">' via global resolver -->
-        <!-- Bayangkan Anda meng-import CSS FontAwesome di index.html aplikasi Anda -->
-        <LumaButton icon="fa-heart" variant="danger">FontAwesome Fallback</LumaButton>
+        <LumaButton icon="check" variant="primary">Disetujui</LumaButton>
+        <LumaButton icon="fa-heart" variant="danger">FontAwesome</LumaButton>
       </div>
     `
   }),
+  parameters: {
+    docs: {
+      source: {
+        language: 'html',
+        code: `
+<!-- String "check" di-resolve ke Lucide SVG via global resolver -->
+<LumaButton icon="check" variant="primary">Disetujui</LumaButton>
+
+<!-- String "fa-heart" di-resolve ke FontAwesome class via global resolver -->
+<LumaButton icon="fa-heart" variant="danger">FontAwesome</LumaButton>
+        `.trim(),
+      },
+    },
+  },
 };
 
 /** 
- * Tombol yang HANYA berisi ikon. Prop \`iconOnly\` memastikan padding sisi kanan-kiri proporsional menjadi bentuk kotak proporsional.
+ * Tombol yang HANYA berisi ikon. Prop \`iconOnly\` memastikan padding proporsional menjadi bentuk kotak.
  * Ingatlah untuk selalu memberikan \`aria-label\` agar dapat dibaca oleh pembaca layar (difabel).
  */
 export const IconOnlyButton: Story = {
@@ -138,4 +173,17 @@ export const IconOnlyButton: Story = {
       </div>
     `
   }),
+  parameters: {
+    docs: {
+      source: {
+        language: 'html',
+        code: `
+<LumaButton icon="fa-trash" iconOnly aria-label="Hapus" variant="danger" size="sm" />
+<LumaButton icon="fa-search" iconOnly aria-label="Cari" variant="primary" size="md" />
+<LumaButton icon="fa-cog" iconOnly aria-label="Pengaturan" variant="outline" size="lg" />
+        `.trim(),
+      },
+    },
+  },
 };
+

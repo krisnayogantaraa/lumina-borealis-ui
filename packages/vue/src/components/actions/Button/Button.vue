@@ -69,8 +69,8 @@ const props = withDefaults(defineProps<LumaButtonProps>(), {
 
 const groupContext = inject(buttonGroupInjectionKey, null);
 
-const actualVariant = computed(() => props.variant ?? groupContext?.variant ?? 'primary');
-const actualSize = computed(() => props.size ?? groupContext?.size ?? 'md');
+const actualVariant = computed(() => props.variant ?? groupContext?.variant.value ?? 'primary');
+const actualSize = computed(() => props.size ?? groupContext?.size.value ?? 'md');
 
 const slots = useSlots();
 
