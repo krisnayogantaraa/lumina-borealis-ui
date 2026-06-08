@@ -1,0 +1,63 @@
+/* ============================================================
+ * LUMA TEXT — Typography Text Component
+ *
+ * Komponen universal untuk paragraf, caption, label, dan
+ * segala jenis teks selain heading.
+ * ============================================================ */
+
+.luma-text {
+  font-family: var(--luma-font-sans);
+  color: var(--luma-text-primary);
+  margin: 0;
+  padding: 0;
+}
+
+/* ---- Variants ---- */
+.luma-text--body-lg {
+  font-size: var(--luma-text-lg);
+  line-height: var(--luma-leading-relaxed);
+}
+
+.luma-text--body-md {
+  font-size: var(--luma-text-base);
+  line-height: var(--luma-leading-normal);
+}
+
+.luma-text--body-sm {
+  font-size: var(--luma-text-sm);
+  line-height: var(--luma-leading-normal);
+}
+
+.luma-text--caption {
+  font-size: var(--luma-text-xs);
+  line-height: var(--luma-leading-normal);
+}
+
+/* ---- Weights ---- */
+.luma-text--weight-light    { font-weight: var(--luma-font-light); }
+.luma-text--weight-normal   { font-weight: var(--luma-font-normal); }
+.luma-text--weight-medium   { font-weight: var(--luma-font-medium); }
+.luma-text--weight-semibold { font-weight: var(--luma-font-semibold); }
+.luma-text--weight-bold     { font-weight: var(--luma-font-bold); }
+
+/* ---- Colors ---- */
+.luma-text--color-default { color: var(--luma-text-primary); }
+.luma-text--color-muted   { color: var(--luma-text-secondary); }
+.luma-text--color-subtle  { color: var(--luma-text-muted); }
+.luma-text--color-primary { color: var(--luma-color-primary); }
+.luma-text--color-danger  { color: var(--luma-color-danger); }
+.luma-text--color-success { color: var(--luma-color-success); }
+.luma-text--color-warning { color: var(--luma-color-warning); }
+
+/* ---- Text Alignment ---- */
+.luma-text--align-left    { text-align: left; }
+.luma-text--align-center  { text-align: center; }
+.luma-text--align-right   { text-align: right; }
+.luma-text--align-justify { text-align: justify; }
+
+/* ---- Truncation ---- */
+.luma-text--truncated {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

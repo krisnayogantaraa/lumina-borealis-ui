@@ -1,0 +1,57 @@
+/* ============================================================
+ * LUMA HEADING — Typography Heading Component
+ *
+ * Standarisasi judul H1-H6 dengan pemisahan antara gaya visual
+ * (level) dan semantik HTML (tag).
+ * ============================================================ */
+
+.luma-heading {
+  font-family: var(--luma-font-sans);
+  color: var(--luma-text-primary);
+  margin: 0;
+  padding: 0;
+  letter-spacing: var(--luma-tracking-tight);
+}
+
+/* ---- Levels (Visual Size) ---- */
+.luma-heading--level-1 {
+  font-size: var(--luma-text-5xl);
+  font-weight: var(--luma-font-extrabold);
+  line-height: var(--luma-leading-none);
+}
+
+.luma-heading--level-2 {
+  font-size: var(--luma-text-4xl);
+  font-weight: var(--luma-font-bold);
+  line-height: var(--luma-leading-tight);
+}
+
+.luma-heading--level-3 {
+  font-size: var(--luma-text-3xl);
+  font-weight: var(--luma-font-bold);
+  line-height: var(--luma-leading-tight);
+}
+
+.luma-heading--level-4 {
+  font-size: var(--luma-text-2xl);
+  font-weight: var(--luma-font-semibold);
+  line-height: var(--luma-leading-snug);
+}
+
+.luma-heading--level-5 {
+  font-size: var(--luma-text-xl);
+  font-weight: var(--luma-font-semibold);
+  line-height: var(--luma-leading-snug);
+}
+
+.luma-heading--level-6 {
+  font-size: var(--luma-text-lg);
+  font-weight: var(--luma-font-semibold);
+  line-height: var(--luma-leading-normal);
+}
+
+/* ---- Text Alignment ---- */
+.luma-heading--align-left { text-align: left; }
+.luma-heading--align-center { text-align: center; }
+.luma-heading--align-right { text-align: right; }
+.luma-heading--align-justify { text-align: justify; }

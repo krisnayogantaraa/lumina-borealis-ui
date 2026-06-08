@@ -1,0 +1,82 @@
+/* ============================================================
+ * LUMA LINK — Typography Link Component
+ *
+ * Hyperlink dengan transisi hover halus, dukungan underline
+ * kontrol, dan fitur external link otomatis.
+ * ============================================================ */
+
+.luma-link {
+  font-family: var(--luma-font-sans);
+  cursor: pointer;
+  text-decoration: none;
+  transition: color var(--luma-transition-fast),
+              text-decoration-color var(--luma-transition-fast);
+  border: none;
+  background: none;
+  padding: 0;
+  display: inline;
+}
+
+.luma-link:focus-visible {
+  outline: 2px solid var(--luma-focus-ring-color);
+  outline-offset: 2px;
+  border-radius: var(--luma-radius-sm);
+}
+
+/* ---- Colors ---- */
+.luma-link--color-primary {
+  color: var(--luma-color-primary);
+}
+.luma-link--color-primary:hover {
+  color: var(--luma-color-primary-hover);
+}
+
+.luma-link--color-default {
+  color: var(--luma-text-primary);
+}
+.luma-link--color-default:hover {
+  color: var(--luma-color-primary);
+}
+
+.luma-link--color-muted {
+  color: var(--luma-text-secondary);
+}
+.luma-link--color-muted:hover {
+  color: var(--luma-text-primary);
+}
+
+/* ---- Underline Styles ---- */
+.luma-link--underline-always {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.luma-link--underline-hover {
+  text-decoration: none;
+}
+.luma-link--underline-hover:hover {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  text-decoration-thickness: 1px;
+}
+
+.luma-link--underline-none {
+  text-decoration: none;
+}
+.luma-link--underline-none:hover {
+  text-decoration: none;
+}
+
+/* ---- External indicator (optional icon after text) ---- */
+.luma-link--external::after {
+  content: '↗';
+  display: inline-block;
+  margin-left: 0.2em;
+  font-size: 0.85em;
+  opacity: 0.7;
+  transition: opacity var(--luma-transition-fast);
+}
+.luma-link--external:hover::after {
+  opacity: 1;
+}
