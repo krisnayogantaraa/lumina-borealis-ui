@@ -1,0 +1,13 @@
+/* ============================================================
+ * LUMA SPACER — Flexbox Spacer Utility
+ *
+ * Komponen tak terlihat yang melebar untuk mengisi ruang kosong.
+ * ============================================================ */
+
+.luma-spacer {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  align-self: stretch;
+  justify-self: stretch;
+}

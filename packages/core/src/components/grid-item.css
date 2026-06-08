@@ -1,0 +1,57 @@
+/* ============================================================
+ * LUMA GRID ITEM — CSS Grid Item Component
+ *
+ * Mengontrol lebar kolom (span), offset, dan perataan
+ * individual di dalam LumaGrid.
+ * ============================================================ */
+
+.luma-grid-item {
+  box-sizing: border-box;
+}
+
+/* ---- Column Spans ---- */
+.luma-grid-item--span-1  { grid-column: span 1 / span 1; }
+.luma-grid-item--span-2  { grid-column: span 2 / span 2; }
+.luma-grid-item--span-3  { grid-column: span 3 / span 3; }
+.luma-grid-item--span-4  { grid-column: span 4 / span 4; }
+.luma-grid-item--span-5  { grid-column: span 5 / span 5; }
+.luma-grid-item--span-6  { grid-column: span 6 / span 6; }
+.luma-grid-item--span-7  { grid-column: span 7 / span 7; }
+.luma-grid-item--span-8  { grid-column: span 8 / span 8; }
+.luma-grid-item--span-9  { grid-column: span 9 / span 9; }
+.luma-grid-item--span-10 { grid-column: span 10 / span 10; }
+.luma-grid-item--span-11 { grid-column: span 11 / span 11; }
+.luma-grid-item--span-12 { grid-column: span 12 / span 12; }
+
+/* ---- Column Offsets ---- */
+.luma-grid-item--offset-1  { grid-column-start: 2; }
+.luma-grid-item--offset-2  { grid-column-start: 3; }
+.luma-grid-item--offset-3  { grid-column-start: 4; }
+.luma-grid-item--offset-4  { grid-column-start: 5; }
+.luma-grid-item--offset-5  { grid-column-start: 6; }
+.luma-grid-item--offset-6  { grid-column-start: 7; }
+.luma-grid-item--offset-7  { grid-column-start: 8; }
+.luma-grid-item--offset-8  { grid-column-start: 9; }
+.luma-grid-item--offset-9  { grid-column-start: 10; }
+.luma-grid-item--offset-10 { grid-column-start: 11; }
+.luma-grid-item--offset-11 { grid-column-start: 12; }
+
+/* ---- Row Spans ---- */
+.luma-grid-item--row-span-1  { grid-row: span 1 / span 1; }
+.luma-grid-item--row-span-2  { grid-row: span 2 / span 2; }
+.luma-grid-item--row-span-3  { grid-row: span 3 / span 3; }
+.luma-grid-item--row-span-4  { grid-row: span 4 / span 4; }
+.luma-grid-item--row-span-5  { grid-row: span 5 / span 5; }
+.luma-grid-item--row-span-6  { grid-row: span 6 / span 6; }
+.luma-grid-item--row-span-7  { grid-row: span 7 / span 7; }
+.luma-grid-item--row-span-8  { grid-row: span 8 / span 8; }
+.luma-grid-item--row-span-9  { grid-row: span 9 / span 9; }
+.luma-grid-item--row-span-10 { grid-row: span 10 / span 10; }
+.luma-grid-item--row-span-11 { grid-row: span 11 / span 11; }
+.luma-grid-item--row-span-12 { grid-row: span 12 / span 12; }
+
+/* ---- Align Self ---- */
+.luma-grid-item--align-self-start   { align-self: start; }
+.luma-grid-item--align-self-center  { align-self: center; }
+.luma-grid-item--align-self-end     { align-self: end; }
+.luma-grid-item--align-self-stretch { align-self: stretch; }

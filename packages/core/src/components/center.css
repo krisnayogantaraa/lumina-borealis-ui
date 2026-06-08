@@ -1,0 +1,17 @@
+/* ============================================================
+ * LUMA CENTER — Center Layout Component
+ *
+ * Memosisikan konten anaknya persis di tengah-tengah ruang
+ * secara vertikal dan horizontal.
+ * ============================================================ */
+
+.luma-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.luma-center--inline {
+  display: inline-flex;
+}

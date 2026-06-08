@@ -12,4 +12,7 @@
 @import './components/grid.css';
 @import './components/container.css';
 @import './components/divider.css';
+@import './components/grid-item.css';
+@import './components/spacer.css';
+@import './components/center.css';
 

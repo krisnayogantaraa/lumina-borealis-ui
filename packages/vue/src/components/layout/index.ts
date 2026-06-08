@@ -10,4 +10,13 @@ export * from './Container/Container.vue';
 export { default as LumaDivider } from './Divider/Divider.vue';
 export * from './Divider/Divider.vue';
 
+export { default as LumaGridItem } from './Grid/GridItem.vue';
+export * from './Grid/GridItem.vue';
+
+export { default as LumaSpacer } from './Spacer/Spacer.vue';
+export * from './Spacer/Spacer.vue';
+
+export { default as LumaCenter } from './Center/Center.vue';
+export * from './Center/Center.vue';
+
 export * from './types';
