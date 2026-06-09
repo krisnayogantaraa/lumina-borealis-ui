@@ -1,6 +1,6 @@
 {
   "name": "@lumina-borealis/vue",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Lumina Borealis UI components for Vue 3",
   "type": "module",
   "main": "./dist/lumina-borealis-vue.umd.cjs",

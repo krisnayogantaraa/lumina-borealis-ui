@@ -1,6 +1,6 @@
 {
   "name": "@lumina-borealis/core",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Lumina Borealis base CSS styles and design tokens",
   "main": "./src/index.css",
   "exports": {
