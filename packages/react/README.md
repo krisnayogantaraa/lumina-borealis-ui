@@ -6,10 +6,10 @@ This package provides a collection of highly customizable, accessible, and beaut
 
 ## 📦 Installation
 
-To use the React components, you must install both this package and the core styling package:
+To use the React components, simply install the package (the core styling package will be installed automatically):
 
 ```bash
-npm install @lumina-borealis/core @lumina-borealis/react
+npm install @lumina-borealis/react
 ```
 
 ## 🚀 Usage

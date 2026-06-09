@@ -30,12 +30,12 @@ Depending on your framework of choice, install the core styles and the specific 
 
 ### For React
 ```bash
-npm install @lumina-borealis/core @lumina-borealis/react
+npm install @lumina-borealis/react
 ```
 
 ### For Vue
 ```bash
-npm install @lumina-borealis/core @lumina-borealis/vue
+npm install @lumina-borealis/vue
 ```
 
 ## 💻 Usage Example (React)
