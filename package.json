@@ -7,7 +7,7 @@
     "packages/*"
   ],
   "scripts": {
-    "build": "npm run build --workspaces",
+    "build": "npm run build --workspaces --if-present",
     "build:vue": "npm run build --workspace=packages/vue",
     "build:react": "npm run build --workspace=packages/react",
     "dev:vue": "npm run dev --workspace=packages/vue",
