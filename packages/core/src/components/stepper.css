@@ -1,0 +1,140 @@
+/* ============================================================
+ * LUMA STEPPER — Multi-Step Wizard Navigation
+ *
+ * Navigasi bertahap horizontal atau vertikal.
+ * ============================================================ */
+
+/* ---- Container ---- */
+.luma-stepper {
+  display: flex;
+  font-family: var(--luma-font-sans);
+}
+
+.luma-stepper--horizontal {
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+.luma-stepper--vertical {
+  flex-direction: column;
+}
+
+/* ---- Step ---- */
+.luma-stepper__step {
+  display: flex;
+  align-items: flex-start;
+  flex: 1;
+  position: relative;
+}
+
+.luma-stepper--horizontal .luma-stepper__step {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.luma-stepper--vertical .luma-stepper__step {
+  flex-direction: row;
+  flex: none;
+}
+
+/* ---- Indicator (circle with number/check) ---- */
+.luma-stepper__indicator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border-radius: var(--luma-radius-full);
+  font-size: var(--luma-text-sm);
+  font-weight: var(--luma-font-semibold);
+  flex-shrink: 0;
+  transition: all var(--luma-transition-base);
+  position: relative;
+  z-index: 1;
+}
+
+/* Upcoming (default) */
+.luma-stepper__step--upcoming .luma-stepper__indicator {
+  background-color: var(--luma-bg-muted);
+  color: var(--luma-text-muted);
+  border: 2px solid var(--luma-border-default);
+}
+
+/* Active */
+.luma-stepper__step--active .luma-stepper__indicator {
+  background-color: var(--luma-color-primary);
+  color: var(--luma-text-inverse);
+  border: 2px solid var(--luma-color-primary);
+  box-shadow: 0 0 0 4px var(--luma-color-primary-light);
+}
+
+/* Completed */
+.luma-stepper__step--completed .luma-stepper__indicator {
+  background-color: var(--luma-color-primary);
+  color: var(--luma-text-inverse);
+  border: 2px solid var(--luma-color-primary);
+}
+
+/* ---- Content (title + description) ---- */
+.luma-stepper__content {
+  display: flex;
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.luma-stepper--horizontal .luma-stepper__content {
+  margin-top: 0.5rem;
+}
+
+.luma-stepper--vertical .luma-stepper__content {
+  margin-left: 0.75rem;
+  padding-bottom: 2rem;
+}
+
+.luma-stepper__title {
+  font-size: var(--luma-text-sm);
+  font-weight: var(--luma-font-medium);
+  color: var(--luma-text-muted);
+  transition: color var(--luma-transition-fast);
+  line-height: 2rem; /* match indicator height */
+}
+
+.luma-stepper__step--active .luma-stepper__title {
+  color: var(--luma-text-primary);
+  font-weight: var(--luma-font-semibold);
+}
+
+.luma-stepper__step--completed .luma-stepper__title {
+  color: var(--luma-text-primary);
+}
+
+.luma-stepper__description {
+  font-size: var(--luma-text-xs);
+  color: var(--luma-text-muted);
+  line-height: var(--luma-leading-normal);
+}
+
+/* ---- Connector (line between steps) ---- */
+.luma-stepper__connector {
+  flex: 1;
+  transition: background-color var(--luma-transition-base);
+}
+
+.luma-stepper--horizontal .luma-stepper__connector {
+  height: 2px;
+  margin-top: 1rem; /* center with indicator */
+  min-width: 2rem;
+  background-color: var(--luma-border-default);
+}
+
+.luma-stepper--vertical .luma-stepper__connector {
+  width: 2px;
+  margin-left: calc(1rem - 1px); /* center with indicator */
+  min-height: 1.5rem;
+  background-color: var(--luma-border-default);
+}
+
+.luma-stepper__connector--completed {
+  background-color: var(--luma-color-primary) !important;
+}

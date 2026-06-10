@@ -18,4 +18,9 @@
 @import './components/heading.css';
 @import './components/text.css';
 @import './components/link.css';
+@import './components/breadcrumbs.css';
+@import './components/tabs.css';
+@import './components/pagination.css';
+@import './components/stepper.css';
+@import './components/dropdown-menu.css';
 

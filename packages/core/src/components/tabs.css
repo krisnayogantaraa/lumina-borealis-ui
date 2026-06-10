@@ -1,0 +1,145 @@
+/* ============================================================
+ * LUMA TABS — Tabbed Navigation Component
+ *
+ * Navigasi konten tab dengan 3 variant visual:
+ * underline, pills, enclosed.
+ * ============================================================ */
+
+/* ---- Container ---- */
+.luma-tabs {
+  font-family: var(--luma-font-sans);
+}
+
+/* ---- Tab List ---- */
+.luma-tabs__list {
+  display: flex;
+  align-items: stretch;
+  gap: 0;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  position: relative;
+}
+
+/* ---- Tab Button ---- */
+.luma-tabs__tab {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.375rem;
+  padding: 0.625rem 1rem;
+  font-family: inherit;
+  font-size: var(--luma-text-sm);
+  font-weight: var(--luma-font-medium);
+  color: var(--luma-text-secondary);
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: color var(--luma-transition-fast),
+              background-color var(--luma-transition-fast),
+              border-color var(--luma-transition-fast),
+              box-shadow var(--luma-transition-fast);
+  white-space: nowrap;
+  position: relative;
+  user-select: none;
+}
+
+.luma-tabs__tab:hover:not(:disabled) {
+  color: var(--luma-text-primary);
+}
+
+.luma-tabs__tab:focus-visible {
+  outline: 2px solid var(--luma-focus-ring-color);
+  outline-offset: -2px;
+  border-radius: var(--luma-radius-sm);
+  z-index: 1;
+}
+
+/* ---- Active Tab ---- */
+.luma-tabs__tab--active {
+  color: var(--luma-color-primary);
+  font-weight: var(--luma-font-semibold);
+}
+
+/* ---- Disabled Tab ---- */
+.luma-tabs__tab:disabled,
+.luma-tabs__tab--disabled {
+  color: var(--luma-text-muted);
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+
+/* ---- Tab Panel ---- */
+.luma-tabs__panel {
+  padding: var(--luma-space-lg) 0;
+}
+
+/* ============================================================
+ * Variant: Underline (Default)
+ * ============================================================ */
+.luma-tabs--underline .luma-tabs__list {
+  border-bottom: 2px solid var(--luma-border-default);
+}
+
+.luma-tabs--underline .luma-tabs__tab {
+  margin-bottom: -2px;
+  border-bottom: 2px solid transparent;
+}
+
+.luma-tabs--underline .luma-tabs__tab--active {
+  border-bottom-color: var(--luma-color-primary);
+}
+
+.luma-tabs--underline .luma-tabs__tab:hover:not(:disabled):not(.luma-tabs__tab--active) {
+  border-bottom-color: var(--luma-border-strong);
+}
+
+/* ============================================================
+ * Variant: Pills
+ * ============================================================ */
+.luma-tabs--pills .luma-tabs__list {
+  gap: 0.25rem;
+  background: var(--luma-bg-muted);
+  padding: 0.25rem;
+  border-radius: var(--luma-radius-lg);
+}
+
+.luma-tabs--pills .luma-tabs__tab {
+  border-radius: var(--luma-radius-md);
+  padding: 0.5rem 0.875rem;
+}
+
+.luma-tabs--pills .luma-tabs__tab--active {
+  background-color: var(--luma-bg-base);
+  color: var(--luma-text-primary);
+  box-shadow: var(--luma-shadow-sm);
+}
+
+.luma-tabs--pills .luma-tabs__tab:hover:not(:disabled):not(.luma-tabs__tab--active) {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+/* ============================================================
+ * Variant: Enclosed
+ * ============================================================ */
+.luma-tabs--enclosed .luma-tabs__list {
+  border-bottom: 1px solid var(--luma-border-default);
+}
+
+.luma-tabs--enclosed .luma-tabs__tab {
+  border: 1px solid transparent;
+  border-bottom: none;
+  border-radius: var(--luma-radius-md) var(--luma-radius-md) 0 0;
+  margin-bottom: -1px;
+  padding: 0.5rem 1rem;
+}
+
+.luma-tabs--enclosed .luma-tabs__tab--active {
+  background-color: var(--luma-bg-base);
+  border-color: var(--luma-border-default);
+  border-bottom-color: var(--luma-bg-base);
+}
+
+.luma-tabs--enclosed .luma-tabs__tab:hover:not(:disabled):not(.luma-tabs__tab--active) {
+  background-color: var(--luma-bg-muted);
+}
