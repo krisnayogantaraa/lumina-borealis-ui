@@ -1,1 +1,1 @@
-﻿export { default as LumaPagination } from './Pagination.vue';
+export { default as LumaPagination } from './Pagination.vue';
