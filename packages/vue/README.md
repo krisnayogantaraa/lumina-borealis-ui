@@ -14,31 +14,52 @@ npm install @lumina-borealis/vue
 
 ## 🚀 Usage
 
-First, ensure you have imported the core CSS in your main entry file (e.g., `main.ts`):
+First, ensure you have imported the core CSS and registered the `createLumina` plugin in your main entry file (e.g., `main.ts`). The plugin allows you to configure global features like Icon Mapping (for string-based icons) and Theming:
 
 ```ts
 // main.ts
 import { createApp } from 'vue'
 import App from './App.vue'
+import { createLumina } from '@lumina-borealis/vue'
+
+// Import core CSS
 import '@lumina-borealis/core/src/index.css'
 
-createApp(App).mount('#app')
+// (Optional) Import icons for global mapping to get tree-shaking with string props
+import { Mail, Check } from 'lucide-vue-next'
+
+const app = createApp(App)
+
+app.use(createLumina({
+  icons: {
+    resolver: (name) => {
+      const map: Record<string, any> = {
+        'mail': Mail,
+        'check': Check
+      }
+      return map[name];
+    }
+  }
+}))
+
+app.mount('#app')
 ```
 
 Then, you can import and use any component in your `.vue` files:
 
 ```vue
 <script setup>
-import { LumaButton, LumaCard, LumaFlex } from '@lumina-borealis/vue';
+import { LumaButton, LumaContainer, LumaStack } from '@lumina-borealis/vue';
 </script>
 
 <template>
-  <LumaCard padding="md">
-    <LumaFlex direction="column" gap="sm">
+  <LumaContainer>
+    <LumaStack direction="vertical" gap="sm">
       <h2>Welcome to Lumina Borealis</h2>
-      <LumaButton variant="primary">Click Me!</LumaButton>
-    </LumaFlex>
-  </LumaCard>
+      <LumaButton variant="primary" icon="mail">Send Message</LumaButton>
+      <LumaButton variant="outline" icon="check">Approved</LumaButton>
+    </LumaStack>
+  </LumaContainer>
 </template>
 ```
 
