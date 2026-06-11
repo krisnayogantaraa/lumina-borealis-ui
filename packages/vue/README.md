@@ -29,16 +29,16 @@ Then, you can import and use any component in your `.vue` files:
 
 ```vue
 <script setup>
-import { Button, Card, Flex } from '@lumina-borealis/vue';
+import { LumaButton, LumaCard, LumaFlex } from '@lumina-borealis/vue';
 </script>
 
 <template>
-  <Card padding="md">
-    <Flex direction="column" gap="sm">
+  <LumaCard padding="md">
+    <LumaFlex direction="column" gap="sm">
       <h2>Welcome to Lumina Borealis</h2>
-      <Button variant="primary">Click Me!</Button>
-    </Flex>
-  </Card>
+      <LumaButton variant="primary">Click Me!</LumaButton>
+    </LumaFlex>
+  </LumaCard>
 </template>
 ```
 
