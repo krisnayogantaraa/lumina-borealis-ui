@@ -42,5 +42,15 @@
     "ui",
     "component-library"
   ],
+  "author": "krisnayogantaraa",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krisnayogantaraa/lumina-borealis-ui.git",
+    "directory": "packages/react"
+  },
+  "bugs": {
+    "url": "https://github.com/krisnayogantaraa/lumina-borealis-ui/issues"
+  },
+  "homepage": "https://github.com/krisnayogantaraa/lumina-borealis-ui#readme",
   "license": "MIT"
 }

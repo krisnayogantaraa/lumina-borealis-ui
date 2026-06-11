@@ -17,5 +17,14 @@
   "engines": {
     "node": ">=18.0.0"
   },
+  "author": "krisnayogantaraa",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krisnayogantaraa/lumina-borealis-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/krisnayogantaraa/lumina-borealis-ui/issues"
+  },
+  "homepage": "https://github.com/krisnayogantaraa/lumina-borealis-ui#readme",
   "license": "MIT"
 }
