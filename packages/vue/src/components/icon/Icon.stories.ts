@@ -9,53 +9,58 @@ import { Camera, Settings, User } from '@lucide/vue'; // Untuk contoh komponen
  * Komponen lain (seperti `LumaButton`) menggunakan `LumaIcon` di belakang layar untuk
  * memastikan *user* memiliki kebebasan mutlak dalam memilih *provider* ikon mereka.
  *
- * ## Panduan Setup: Global Icon Resolver ⚙️
+ * ## 3 Cara Menggunakan Ikon
  * 
- * Agar Anda dapat memasukkan *string* (misalnya `icon="user"`) dan membiarkan Lumina merendernya dengan benar,
- * Anda harus mendaftarkan fungsi *resolver* di file `main.ts` aplikasi Anda.
- *
- * ### Kasus 1: Menggunakan Lucide (atau Phosphor) dengan Tree-Shaking Sempurna
- * Jika Anda langsung me-*mapping* *string* ke seluruh *library* Lucide, ukuran aplikasi Anda akan membengkak.
- * Lakukan pemetaan secara eksplisit hanya untuk ikon yang Anda pakai:
+ * LumaIcon dirancang agar sangat fleksibel. Anda bebas memilih satu dari tiga metode ini sesuai dengan tingkat kenyamanan dan kebutuhan proyek Anda:
+ * 
+ * ### Cara 1: Import Manual di Setiap Halaman (Sangat Disarankan)
+ * Cara paling aman dan paling optimal. Anda meng-*import* komponen SVG langsung (misalnya dari `lucide-vue-next`) di setiap halaman atau komponen Vue yang membutuhkannya.
+ * - **Kelebihan**: Ukuran *bundle* aplikasi akan sangat kecil karena menjamin 100% Tree-Shaking.
+ * - **Kekurangan**: Harus meng-*import* ikon satu per satu di setiap file, jadi terasa sedikit repetitif.
+ * 
+ * ### Cara 2: Global Map di \`main.ts\` (SVG / Component)
+ * Jika Anda lelah meng-*import* ikon di setiap halaman, tapi tetap ingin memakai ikon berbasis komponen SVG, Anda bisa mendaftarkannya secara global menggunakan fitur **Resolver** di \`main.ts\`.
+ * - **Kelebihan**: Anda cukup memanggil nama ikon dalam bentuk *string* (misal: \`name="user"\`) di komponen mana pun tanpa perlu *import* lagi.
+ * - **Kekurangan**: Anda harus mendaftarkan ikon yang Anda pakai ke dalam \`map\` secara manual di \`main.ts\` agar ikon yang tidak terpakai tidak ikut masuk ke *bundle* akhir.
  * 
  * ```ts
- * // main.ts
- * import { createApp } from 'vue'
- * import { createLumina } from '@lumina-borealis/vue'
+ * // Di main.ts
  * import { User, Settings, Camera } from '@lucide/vue'
  * 
- * const app = createApp(App)
- * 
  * app.use(createLumina({
  *   icons: {
  *     resolver: (name) => {
- *       // Mapping manual menjamin 100% Tree-Shaking!
- *       const map: Record<string, any> = {
- *         'user': User,
- *         'settings': Settings,
- *         'camera': Camera
- *       }
- *       return map[name];
+ *        // Mapping komponen SVG ke string
+ *        const map: Record<string, any> = {
+ *          'user': User,
+ *          'camera': Camera,
+ *          'settings': Settings
+ *        }
+ *        return map[name];
  *     }
  *   }
  * }))
  * ```
  *
- * ### Kasus 2: Menggunakan FontAwesome (atau PrimeIcons / Class-based)
- * Jika proyek Anda terlanjur menggunakan FontAwesome dari CDN atau CSS, Anda bisa me-*return* *string class* HTML:
+ * ### Cara 3: Class-based (FontAwesome / Icon Fonts)
+ * Jika proyek Anda lebih nyaman (atau sudah terlanjur) menggunakan pustaka ikon berbasis *font/class* seperti FontAwesome, Anda juga bisa mengaturnya di **Resolver**.
+ * - **Kelebihan**: Sangat mudah dan ringkas.
+ * - **Kekurangan**: Bergantung pada CSS eksternal (CDN/Asset).
  * 
  * ```ts
- * // main.ts
+ * // Di main.ts
  * app.use(createLumina({
  *   icons: {
  *     resolver: (name) => {
+ *       // Kalau nama ikon diawali 'fa-', jadikan class FontAwesome
  *       if (name.startsWith('fa-')) {
- *         return \`fa-solid \${name}\`; // Ini akan dirender sebagai <i class="fa-solid fa-xxx"></i>
+ *         return \`fa-solid \${name}\`;
  *       }
  *     }
  *   }
  * }))
  * ```
+ * Anda kemudian bisa menggunakannya semudah: \`<LumaIcon name="fa-home" />\`
  */
 const meta = {
   title: 'Components/LumaIcon',

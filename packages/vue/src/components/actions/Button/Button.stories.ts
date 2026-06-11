@@ -5,14 +5,14 @@ import { Mail, Search } from '@lucide/vue'; // Mengambil langsung komponen dari 
 /**
  * **LumaButton** — Komponen tombol interaktif untuk Lumina Borealis.
  *
- * ## Sistem Ikon Global 🎨
- * Lumina Borealis merekomendasikan **[Lucide Icons](https://lucide.dev)** sebagai provider ikon default. 
- * LumaButton mendukung Sistem Ikon Hybrid yang sangat fleksibel. Anda dapat mengisi prop `icon` dengan:
+ * ## Sistem Ikon (3 Cara Penggunaan) 🎨
+ * LumaButton mendukung Sistem Ikon Hybrid yang sangat fleksibel. Anda dapat mengisi prop `icon` dengan 3 cara:
  * 
- * 1. **Komponen Vue Asli (Best Practice)**: Mencegah ukuran aplikasi membesar (100% Tree-Shakable). Contoh: `:icon="MailIcon"`
- * 2. **String Global Resolved**: Cukup berikan string seperti `icon="check"`. Lumina akan menerjemahkannya berdasarkan konfigurasi `createLumina()` di aplikasi Anda (bisa menjadi Lucide SVG, FontAwesome class, dll).
+ * 1. **Manual Import (Paling Disarankan)**: Import komponen (misal Lucide) di tiap file. Contoh: `:icon="MailIcon"`. Menjamin 100% Tree-shaking.
+ * 2. **Global Component Map**: Cukup tulis string `icon="mail"`, dan atur *resolver* di `main.ts` untuk me-return komponen SVG-nya tanpa perlu *import* manual lagi.
+ * 3. **Global Class-based**: Tulis string `icon="fa-mail"`, dan atur *resolver* di `main.ts` untuk me-return class FontAwesome atau pustaka lain.
  * 
- * 💡 **PENTING (Ikon):** Untuk memetakan ikon secara global atau mengganti *provider* ikon, baca **[Dokumentasi LumaIcon](?path=/docs/components-lumaicon--docs)**.
+ * 💡 **PENTING (Ikon):** Untuk melihat detail konfigurasi ketiga cara di atas, baca **[Dokumentasi LumaIcon](?path=/docs/components-lumaicon--docs)**.
  * 
  * 💡 **PENTING (Grup):** Untuk menggabungkan beberapa tombol menjadi satu kesatuan visual yang menempel (seperti filter atau navigasi), Anda harus membungkusnya dengan **[LumaButtonGroup](?path=/docs/actions-lumabuttongroup--docs)**.
  */
