@@ -1,6 +1,6 @@
 {
   "name": "lumina-borealis-ui",
-  "version": "0.2.3",
+  "version": "0.2.4",
   "private": true,
   "description": "Lumina Borealis — A multi-framework UI component library",
   "workspaces": [
@@ -17,5 +17,14 @@
   "engines": {
     "node": ">=18.0.0"
   },
+  "author": "krisnayogantaraa",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/krisnayogantaraa/lumina-borealis-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/krisnayogantaraa/lumina-borealis-ui/issues"
+  },
+  "homepage": "https://github.com/krisnayogantaraa/lumina-borealis-ui#readme",
   "license": "MIT"
 }
