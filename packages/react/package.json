@@ -1,6 +1,6 @@
 {
   "name": "@lumina-borealis/react",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Lumina Borealis UI components for React",
   "type": "module",
   "main": "./dist/lumina-borealis-react.umd.cjs",
