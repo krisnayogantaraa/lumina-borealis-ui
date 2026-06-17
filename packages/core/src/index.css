@@ -23,4 +23,13 @@
 @import './components/pagination.css';
 @import './components/stepper.css';
 @import './components/dropdown-menu.css';
-
+@import './components/card.css';
+@import './components/avatar.css';
+@import './components/badge.css';
+@import './components/accordion.css';
+@import './components/tag.css';
+@import './components/empty-state.css';
+@import './components/description-list.css';
+@import './components/statistic.css';
+@import './components/kbd.css';
+@import './components/timeline.css';

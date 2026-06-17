@@ -1,0 +1,107 @@
+/* ============================================================
+ * LUMA TIMELINE — Styles
+ * ============================================================ */
+
+.luma-timeline {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.luma-timeline-item {
+  display: flex;
+  position: relative;
+  gap: var(--luma-space-md);
+  box-sizing: border-box;
+}
+
+/* ---- Separator (Dot & Line) ---- */
+.luma-timeline-item__separator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.luma-timeline-item__dot {
+  width: 0.75rem;
+  height: 0.75rem;
+  border-radius: var(--luma-radius-full);
+  background-color: var(--luma-slate-300);
+  border: 2px solid var(--luma-bg-base);
+  box-shadow: 0 0 0 1px var(--luma-border-strong);
+  margin-top: 0.25rem;
+  z-index: 1;
+}
+
+/* Dots color mapping */
+.luma-timeline-item__dot--neutral {
+  background-color: var(--luma-slate-500);
+  box-shadow: 0 0 0 1px var(--luma-slate-400);
+}
+
+.luma-timeline-item__dot--primary {
+  background-color: var(--luma-color-primary);
+  box-shadow: 0 0 0 1px var(--luma-color-primary-border);
+}
+
+.luma-timeline-item__dot--success {
+  background-color: var(--luma-color-success);
+  box-shadow: 0 0 0 1px var(--luma-emerald-400);
+}
+
+.luma-timeline-item__dot--warning {
+  background-color: var(--luma-color-warning);
+  box-shadow: 0 0 0 1px var(--luma-amber-400);
+}
+
+.luma-timeline-item__dot--danger {
+  background-color: var(--luma-color-danger);
+  box-shadow: 0 0 0 1px var(--luma-rose-400);
+}
+
+.luma-timeline-item__line {
+  width: 2px;
+  flex-grow: 1;
+  background-color: var(--luma-border-default);
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+/* Hide line on the last item */
+.luma-timeline-item:last-child .luma-timeline-item__line {
+  display: none;
+}
+
+/* ---- Content Area ---- */
+.luma-timeline-item__content {
+  flex-grow: 1;
+  padding-bottom: var(--luma-space-lg);
+  font-family: var(--luma-font-sans);
+}
+
+.luma-timeline-item:last-child .luma-timeline-item__content {
+  padding-bottom: 0;
+}
+
+.luma-timeline-item__title {
+  margin: 0;
+  font-size: var(--luma-text-sm);
+  font-weight: var(--luma-font-semibold);
+  color: var(--luma-text-primary);
+  line-height: var(--luma-leading-tight);
+}
+
+.luma-timeline-item__description {
+  margin: var(--luma-space-xs) 0 0 0;
+  font-size: var(--luma-text-sm);
+  color: var(--luma-text-secondary);
+  line-height: var(--luma-leading-normal);
+}
+
+.luma-timeline-item__time {
+  margin-top: var(--luma-space-xs);
+  font-size: var(--luma-text-xs);
+  color: var(--luma-text-muted);
+}

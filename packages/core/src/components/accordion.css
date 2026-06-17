@@ -1,0 +1,84 @@
+/* ============================================================
+ * LUMA ACCORDION — Styles
+ * ============================================================ */
+
+.luma-accordion {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border-top: 1px solid var(--luma-border-default);
+  border-bottom: 1px solid var(--luma-border-default);
+}
+
+.luma-accordion-item {
+  border-bottom: 1px solid var(--luma-border-default);
+}
+
+.luma-accordion-item:last-child {
+  border-bottom: none;
+}
+
+/* ---- Trigger Header ---- */
+.luma-accordion-item__trigger {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--luma-space-md) 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  font-family: var(--luma-font-sans);
+  font-size: var(--luma-text-base);
+  font-weight: var(--luma-font-medium);
+  color: var(--luma-text-primary);
+  text-align: left;
+  transition: color var(--luma-transition-fast);
+}
+
+.luma-accordion-item__trigger:hover {
+  color: var(--luma-color-primary);
+}
+
+.luma-accordion-item__trigger:focus-visible {
+  outline: 2px solid var(--luma-focus-ring-color);
+  outline-offset: 2px;
+}
+
+/* ---- Chevron Icon ---- */
+.luma-accordion-item__chevron {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: var(--luma-text-secondary);
+  transition: transform var(--luma-transition-base);
+}
+
+.luma-accordion-item--open > .luma-accordion-item__trigger .luma-accordion-item__chevron {
+  transform: rotate(180deg);
+  color: var(--luma-color-primary);
+}
+
+/* ---- Content Box (CSS Grid Auto-height Transition) ---- */
+.luma-accordion-item__content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows var(--luma-transition-base);
+  overflow: hidden;
+}
+
+.luma-accordion-item--open > .luma-accordion-item__content {
+  grid-template-rows: 1fr;
+}
+
+.luma-accordion-item__content-inner {
+  min-height: 0;
+  overflow: hidden;
+  font-family: var(--luma-font-sans);
+  font-size: var(--luma-text-sm);
+  color: var(--luma-text-secondary);
+  line-height: var(--luma-leading-normal);
+}
+
+.luma-accordion-item--open > .luma-accordion-item__content .luma-accordion-item__content-inner {
+  padding-bottom: var(--luma-space-md);
+}

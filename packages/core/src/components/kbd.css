@@ -1,0 +1,22 @@
+/* ============================================================
+ * LUMA KBD — Styles
+ * ============================================================ */
+
+.luma-kbd {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25em 0.5em;
+  font-family: var(--luma-font-mono);
+  font-size: 0.75em;
+  font-weight: var(--luma-font-semibold);
+  line-height: var(--luma-leading-none);
+  color: var(--luma-text-secondary);
+  background-color: var(--luma-bg-muted);
+  border: 1px solid var(--luma-border-strong);
+  border-bottom-width: 2px;
+  border-radius: var(--luma-radius-sm);
+  box-shadow: var(--luma-shadow-sm);
+  white-space: nowrap;
+  user-select: none;
+}

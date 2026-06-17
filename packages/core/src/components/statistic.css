@@ -1,0 +1,60 @@
+/* ============================================================
+ * LUMA STATISTIC — Styles
+ * ============================================================ */
+
+.luma-stat {
+  display: flex;
+  flex-direction: column;
+  font-family: var(--luma-font-sans);
+  box-sizing: border-box;
+  padding: var(--luma-space-md);
+  border-radius: var(--luma-radius-md);
+  background-color: var(--luma-bg-base);
+  border: 1px solid var(--luma-border-default);
+}
+
+.luma-stat__label {
+  font-size: var(--luma-text-xs);
+  font-weight: var(--luma-font-medium);
+  color: var(--luma-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: var(--luma-tracking-wide);
+  margin-bottom: var(--luma-space-xs);
+}
+
+.luma-stat__value {
+  font-size: var(--luma-text-3xl);
+  font-weight: var(--luma-font-bold);
+  color: var(--luma-text-primary);
+  line-height: var(--luma-leading-none);
+  margin-bottom: var(--luma-space-xs);
+}
+
+.luma-stat__help-text {
+  display: flex;
+  align-items: center;
+  gap: var(--luma-space-xs);
+  font-size: var(--luma-text-xs);
+  color: var(--luma-text-muted);
+}
+
+.luma-stat__trend {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.125rem;
+  font-weight: var(--luma-font-semibold);
+}
+
+.luma-stat__trend--up {
+  color: var(--luma-color-success);
+}
+
+.luma-stat__trend--down {
+  color: var(--luma-color-danger);
+}
+
+.luma-stat__trend svg {
+  width: 0.875rem;
+  height: 0.875rem;
+  stroke-width: 2.5;
+}
