@@ -1,6 +1,6 @@
 {
   "name": "lumina-borealis-ui",
-  "version": "0.2.4",
+  "version": "0.2.5",
   "private": true,
   "description": "Lumina Borealis — A multi-framework UI component library",
   "workspaces": [
