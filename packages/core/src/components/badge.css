@@ -1,0 +1,106 @@
+/* ============================================================
+ * LUMA BADGE — Styles
+ * ============================================================ */
+
+.luma-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25em 0.625em;
+  font-family: var(--luma-font-sans);
+  font-size: var(--luma-text-xs);
+  font-weight: var(--luma-font-semibold);
+  line-height: var(--luma-leading-none);
+  border-radius: var(--luma-radius-full);
+  white-space: nowrap;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+}
+
+/* ============================================================
+ * Colors & Variants Combo
+ * ============================================================ */
+
+/* ---- Neutral ---- */
+.luma-badge--color-neutral.luma-badge--variant-solid {
+  background-color: var(--luma-slate-600);
+  color: var(--luma-text-inverse);
+}
+.luma-badge--color-neutral.luma-badge--variant-subtle {
+  background-color: var(--luma-slate-100);
+  color: var(--luma-slate-700);
+}
+.luma-badge--color-neutral.luma-badge--variant-outline {
+  border-color: var(--luma-border-strong);
+  color: var(--luma-slate-700);
+}
+
+/* ---- Primary (Teal) ---- */
+.luma-badge--color-primary.luma-badge--variant-solid {
+  background-color: var(--luma-color-primary);
+  color: var(--luma-text-inverse);
+}
+.luma-badge--color-primary.luma-badge--variant-subtle {
+  background-color: var(--luma-color-primary-light);
+  color: var(--luma-color-primary-hover);
+}
+.luma-badge--color-primary.luma-badge--variant-outline {
+  border-color: var(--luma-color-primary-border);
+  color: var(--luma-color-primary);
+}
+
+/* ---- Secondary (Indigo) ---- */
+.luma-badge--color-secondary.luma-badge--variant-solid {
+  background-color: var(--luma-color-secondary);
+  color: var(--luma-text-inverse);
+}
+.luma-badge--color-secondary.luma-badge--variant-subtle {
+  background-color: var(--luma-color-secondary-light);
+  color: var(--luma-color-secondary-hover);
+}
+.luma-badge--color-secondary.luma-badge--variant-outline {
+  border-color: var(--luma-indigo-300);
+  color: var(--luma-color-secondary);
+}
+
+/* ---- Success (Emerald) ---- */
+.luma-badge--color-success.luma-badge--variant-solid {
+  background-color: var(--luma-color-success);
+  color: var(--luma-text-inverse);
+}
+.luma-badge--color-success.luma-badge--variant-subtle {
+  background-color: var(--luma-color-success-light);
+  color: var(--luma-emerald-600);
+}
+.luma-badge--color-success.luma-badge--variant-outline {
+  border-color: var(--luma-emerald-400);
+  color: var(--luma-color-success);
+}
+
+/* ---- Warning (Amber) ---- */
+.luma-badge--color-warning.luma-badge--variant-solid {
+  background-color: var(--luma-color-warning);
+  color: var(--luma-text-inverse);
+}
+.luma-badge--color-warning.luma-badge--variant-subtle {
+  background-color: var(--luma-color-warning-light);
+  color: var(--luma-amber-600);
+}
+.luma-badge--color-warning.luma-badge--variant-outline {
+  border-color: var(--luma-amber-400);
+  color: var(--luma-color-warning);
+}
+
+/* ---- Danger (Rose) ---- */
+.luma-badge--color-danger.luma-badge--variant-solid {
+  background-color: var(--luma-color-danger);
+  color: var(--luma-text-inverse);
+}
+.luma-badge--color-danger.luma-badge--variant-subtle {
+  background-color: var(--luma-color-danger-light);
+  color: var(--luma-color-danger);
+}
+.luma-badge--color-danger.luma-badge--variant-outline {
+  border-color: var(--luma-rose-300);
+  color: var(--luma-color-danger);
+}

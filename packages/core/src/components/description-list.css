@@ -1,0 +1,57 @@
+/* ============================================================
+ * LUMA DESCRIPTION LIST — Styles
+ * ============================================================ */
+
+.luma-description-list {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* ---- Layout Spacing ---- */
+.luma-description-list--spacing-sm { gap: var(--luma-space-xs); }
+.luma-description-list--spacing-md { gap: var(--luma-space-sm); }
+.luma-description-list--spacing-lg { gap: var(--luma-space-md); }
+
+/* ---- Item Wrapper ---- */
+.luma-description-list__item {
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.luma-description-list--vertical .luma-description-list__item {
+  flex-direction: column;
+  gap: 0.125rem;
+}
+
+.luma-description-list--horizontal .luma-description-list__item {
+  flex-direction: row;
+  align-items: baseline;
+}
+
+/* ---- Term (dt) & Details (dd) ---- */
+.luma-description-list__term {
+  margin: 0;
+  font-family: var(--luma-font-sans);
+  font-size: var(--luma-text-sm);
+  font-weight: var(--luma-font-medium);
+  color: var(--luma-text-secondary);
+}
+
+.luma-description-list--horizontal .luma-description-list__term {
+  width: 30%;
+  min-width: 120px;
+  flex-shrink: 0;
+}
+
+.luma-description-list__details {
+  margin: 0;
+  font-family: var(--luma-font-sans);
+  font-size: var(--luma-text-sm);
+  font-weight: var(--luma-font-normal);
+  color: var(--luma-text-primary);
+  flex-grow: 1;
+}

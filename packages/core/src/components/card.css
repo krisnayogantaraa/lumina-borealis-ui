@@ -1,0 +1,92 @@
+/* ============================================================
+ * LUMA CARD — Styles
+ * ============================================================ */
+
+.luma-card {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--luma-bg-base);
+  border-radius: var(--luma-radius-lg);
+  border: 1px solid transparent;
+  color: var(--luma-text-primary);
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: transform var(--luma-transition-base), box-shadow var(--luma-transition-base);
+  --luma-card-padding: var(--luma-space-md);
+}
+
+/* ---- Variants ---- */
+.luma-card--variant-elevated {
+  background-color: var(--luma-bg-base);
+  border-color: var(--luma-border-default);
+  box-shadow: var(--luma-shadow-md);
+}
+
+.luma-card--variant-flat {
+  background-color: var(--luma-bg-surface);
+  border-color: transparent;
+}
+
+.luma-card--variant-outline {
+  background-color: transparent;
+  border-color: var(--luma-border-strong);
+}
+
+/* ---- Padding Variants ---- */
+.luma-card--padding-none {
+  --luma-card-padding: 0px;
+}
+.luma-card--padding-sm {
+  --luma-card-padding: var(--luma-space-sm);
+}
+.luma-card--padding-md {
+  --luma-card-padding: var(--luma-space-md);
+}
+.luma-card--padding-lg {
+  --luma-card-padding: var(--luma-space-lg);
+}
+
+/* ---- Subcomponents ---- */
+.luma-card__header {
+  padding: var(--luma-card-padding);
+  padding-bottom: 0;
+  display: flex;
+  flex-direction: column;
+  gap: var(--luma-space-xs);
+}
+
+.luma-card__title {
+  margin: 0;
+  font-family: var(--luma-font-sans);
+  font-size: var(--luma-text-lg);
+  font-weight: var(--luma-font-semibold);
+  color: var(--luma-text-primary);
+  line-height: var(--luma-leading-tight);
+}
+
+.luma-card__description {
+  margin: 0;
+  font-family: var(--luma-font-sans);
+  font-size: var(--luma-text-sm);
+  color: var(--luma-text-secondary);
+  line-height: var(--luma-leading-normal);
+}
+
+.luma-card__body {
+  padding: var(--luma-card-padding);
+  flex: 1 1 auto;
+}
+
+/* Adjust top padding if there is a header before it */
+.luma-card__header + .luma-card__body {
+  padding-top: var(--luma-space-sm);
+}
+
+.luma-card__footer {
+  padding: var(--luma-card-padding);
+  padding-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: var(--luma-space-sm);
+}

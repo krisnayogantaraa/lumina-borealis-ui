@@ -1,0 +1,90 @@
+/* ============================================================
+ * LUMA EMPTY STATE — Styles
+ * ============================================================ */
+
+.luma-empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+/* ---- Size Variants ---- */
+.luma-empty-state--size-sm {
+  padding: var(--luma-space-lg) var(--luma-space-md);
+}
+
+.luma-empty-state--size-md {
+  padding: var(--luma-space-2xl) var(--luma-space-lg);
+}
+
+.luma-empty-state--size-lg {
+  padding: var(--luma-space-2xl) var(--luma-space-xl);
+}
+
+/* ---- Icon ---- */
+.luma-empty-state__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: var(--luma-space-md);
+  color: var(--luma-text-muted);
+}
+
+.luma-empty-state--size-sm .luma-empty-state__icon svg {
+  width: 2rem;
+  height: 2rem;
+}
+
+.luma-empty-state--size-md .luma-empty-state__icon svg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.luma-empty-state--size-lg .luma-empty-state__icon svg {
+  width: 4rem;
+  height: 4rem;
+}
+
+/* ---- Title ---- */
+.luma-empty-state__title {
+  margin: 0 0 var(--luma-space-xs) 0;
+  font-family: var(--luma-font-sans);
+  font-weight: var(--luma-font-semibold);
+  color: var(--luma-text-primary);
+  line-height: var(--luma-leading-tight);
+}
+
+.luma-empty-state--size-sm .luma-empty-state__title {
+  font-size: var(--luma-text-base);
+}
+
+.luma-empty-state--size-md .luma-empty-state__title {
+  font-size: var(--luma-text-xl);
+}
+
+.luma-empty-state--size-lg .luma-empty-state__title {
+  font-size: var(--luma-text-2xl);
+}
+
+/* ---- Description ---- */
+.luma-empty-state__description {
+  margin: 0;
+  max-width: 24rem;
+  font-family: var(--luma-font-sans);
+  font-size: var(--luma-text-sm);
+  color: var(--luma-text-secondary);
+  line-height: var(--luma-leading-normal);
+}
+
+/* ---- Actions ---- */
+.luma-empty-state__actions {
+  margin-top: var(--luma-space-lg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--luma-space-sm);
+}

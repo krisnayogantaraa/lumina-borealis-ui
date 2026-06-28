@@ -1,0 +1,97 @@
+/* ============================================================
+ * LUMA AVATAR — Styles
+ * ============================================================ */
+
+.luma-avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  vertical-align: middle;
+  background-color: var(--luma-bg-muted);
+  color: var(--luma-text-secondary);
+  font-family: var(--luma-font-sans);
+  font-weight: var(--luma-font-semibold);
+  user-select: none;
+  flex-shrink: 0;
+}
+
+/* ---- Size Variants ---- */
+.luma-avatar--size-sm {
+  width: 2rem;
+  height: 2rem;
+  font-size: var(--luma-text-xs);
+}
+
+.luma-avatar--size-md {
+  width: 3rem;
+  height: 3rem;
+  font-size: var(--luma-text-base);
+}
+
+.luma-avatar--size-lg {
+  width: 4rem;
+  height: 4rem;
+  font-size: var(--luma-text-xl);
+}
+
+/* ---- Shape Variants ---- */
+.luma-avatar--shape-circle {
+  border-radius: var(--luma-radius-full);
+}
+.luma-avatar--shape-circle .luma-avatar__image {
+  border-radius: var(--luma-radius-full);
+}
+
+.luma-avatar--shape-square {
+  border-radius: var(--luma-radius-md);
+}
+.luma-avatar--shape-square .luma-avatar__image {
+  border-radius: var(--luma-radius-md);
+}
+
+/* ---- Subcomponents ---- */
+.luma-avatar__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.luma-avatar__fallback {
+  text-transform: uppercase;
+}
+
+/* ---- Status Indicator Badge ---- */
+.luma-avatar__badge {
+  position: absolute;
+  width: 25%;
+  height: 25%;
+  min-width: 8px;
+  min-height: 8px;
+  border-radius: var(--luma-radius-full);
+  border: 2px solid var(--luma-bg-base);
+  bottom: 0;
+  right: 0;
+}
+
+/* Adjust badge position slightly for circles */
+.luma-avatar--shape-circle .luma-avatar__badge {
+  transform: translate(2%, 2%);
+}
+
+.luma-avatar__badge--online {
+  background-color: var(--luma-color-success);
+}
+
+.luma-avatar__badge--offline {
+  background-color: var(--luma-text-muted);
+}
+
+.luma-avatar__badge--away {
+  background-color: var(--luma-color-warning);
+}
+
+.luma-avatar__badge--busy {
+  background-color: var(--luma-color-danger);
+}

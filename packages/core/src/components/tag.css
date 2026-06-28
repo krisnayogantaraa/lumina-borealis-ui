@@ -1,0 +1,167 @@
+/* ============================================================
+ * LUMA TAG — Styles
+ * ============================================================ */
+
+.luma-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  border-radius: var(--luma-radius-md);
+  font-family: var(--luma-font-sans);
+  font-weight: var(--luma-font-semibold);
+  line-height: var(--luma-leading-none);
+  white-space: nowrap;
+  border: 1px solid transparent;
+  box-sizing: border-box;
+  vertical-align: middle;
+}
+
+/* ---- Size Variants ---- */
+.luma-tag--size-sm {
+  padding: 0.125rem 0.375rem;
+  font-size: var(--luma-text-xs);
+}
+
+.luma-tag--size-md {
+  padding: 0.25rem 0.5rem;
+  font-size: var(--luma-text-xs);
+}
+
+.luma-tag--size-lg {
+  padding: 0.375rem 0.75rem;
+  font-size: var(--luma-text-sm);
+}
+
+/* ---- Subcomponents ---- */
+.luma-tag__label {
+  display: inline-flex;
+  align-items: center;
+}
+
+.luma-tag__close-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  border-radius: var(--luma-radius-sm);
+  color: inherit;
+  opacity: 0.7;
+  transition: opacity var(--luma-transition-fast), background-color var(--luma-transition-fast);
+}
+
+.luma-tag__close-button:hover {
+  opacity: 1;
+  background-color: rgba(0, 0, 0, 0.08);
+}
+
+.luma-tag__close-button svg {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.luma-tag--size-lg .luma-tag__close-button svg {
+  width: 0.875rem;
+  height: 0.875rem;
+}
+
+/* ---- Disabled ---- */
+.luma-tag--disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.luma-tag--disabled .luma-tag__close-button {
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
+/* ============================================================
+ * Colors & Variants Combo
+ * ============================================================ */
+
+/* ---- Neutral ---- */
+.luma-tag--color-neutral.luma-tag--variant-solid {
+  background-color: var(--luma-slate-600);
+  color: var(--luma-text-inverse);
+}
+.luma-tag--color-neutral.luma-tag--variant-subtle {
+  background-color: var(--luma-slate-100);
+  color: var(--luma-slate-700);
+}
+.luma-tag--color-neutral.luma-tag--variant-outline {
+  border-color: var(--luma-border-strong);
+  color: var(--luma-slate-700);
+}
+
+/* ---- Primary (Teal) ---- */
+.luma-tag--color-primary.luma-tag--variant-solid {
+  background-color: var(--luma-color-primary);
+  color: var(--luma-text-inverse);
+}
+.luma-tag--color-primary.luma-tag--variant-subtle {
+  background-color: var(--luma-color-primary-light);
+  color: var(--luma-color-primary-hover);
+}
+.luma-tag--color-primary.luma-tag--variant-outline {
+  border-color: var(--luma-color-primary-border);
+  color: var(--luma-color-primary);
+}
+
+/* ---- Secondary (Indigo) ---- */
+.luma-tag--color-secondary.luma-tag--variant-solid {
+  background-color: var(--luma-color-secondary);
+  color: var(--luma-text-inverse);
+}
+.luma-tag--color-secondary.luma-tag--variant-subtle {
+  background-color: var(--luma-color-secondary-light);
+  color: var(--luma-color-secondary-hover);
+}
+.luma-tag--color-secondary.luma-tag--variant-outline {
+  border-color: var(--luma-indigo-300);
+  color: var(--luma-color-secondary);
+}
+
+/* ---- Success (Emerald) ---- */
+.luma-tag--color-success.luma-tag--variant-solid {
+  background-color: var(--luma-color-success);
+  color: var(--luma-text-inverse);
+}
+.luma-tag--color-success.luma-tag--variant-subtle {
+  background-color: var(--luma-color-success-light);
+  color: var(--luma-emerald-600);
+}
+.luma-tag--color-success.luma-tag--variant-outline {
+  border-color: var(--luma-emerald-400);
+  color: var(--luma-color-success);
+}
+
+/* ---- Warning (Amber) ---- */
+.luma-tag--color-warning.luma-tag--variant-solid {
+  background-color: var(--luma-color-warning);
+  color: var(--luma-text-inverse);
+}
+.luma-tag--color-warning.luma-tag--variant-subtle {
+  background-color: var(--luma-color-warning-light);
+  color: var(--luma-amber-600);
+}
+.luma-tag--color-warning.luma-tag--variant-outline {
+  border-color: var(--luma-amber-400);
+  color: var(--luma-color-warning);
+}
+
+/* ---- Danger (Rose) ---- */
+.luma-tag--color-danger.luma-tag--variant-solid {
+  background-color: var(--luma-color-danger);
+  color: var(--luma-text-inverse);
+}
+.luma-tag--color-danger.luma-tag--variant-subtle {
+  background-color: var(--luma-color-danger-light);
+  color: var(--luma-color-danger);
+}
+.luma-tag--color-danger.luma-tag--variant-outline {
+  border-color: var(--luma-rose-300);
+  color: var(--luma-color-danger);
+}
